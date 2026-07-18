@@ -1,0 +1,85 @@
+<!-- Paste full enhanced HTML here -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Escrow</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Enhanced Header with Sidebar Toggle -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="brand"><i class="fas fa-handshake"></i> Freelance Escrow</div>
+      <button id="sidebarToggle" class="toggle-btn"><i class="fas fa-bars"></i></button>
+    </div>
+    <nav id="sidebar" class="sidebar hidden">
+      <ul>
+        <li><a href="#" id="goHome"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#" id="goProjects"><i class="fas fa-briefcase"></i> Projects</a></li>
+        <li><a href="#" id="goLedger"><i class="fas fa-chart-line"></i> Ledger</a></li>
+        <li><a href="#" id="goAdmin"><i class="fas fa-cog"></i> Admin</a></li>
+        <li><a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content (SPA Sections) -->
+  <main class="main">
+    <!-- Home Section (Hero) -->
+    <section id="homeSection" class="section hero">
+      <div class="hero-content">
+        <h1>Welcome to Freelance Escrow</h1>
+        <p>Secure payments for freelancers. Fees: 10% Client, 5% Freelancer. Transparent & Admin-approved milestones.</p>
+        <div class="cta-buttons">
+          <button class="btn primary" id="goClient"><i class="fas fa-user-tie"></i> Post Project</button>
+          <button class="btn secondary" id="goFreelancer"><i class="fas fa-user-friends"></i> Find Jobs</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Auth Section -->
+    <section id="authSection" class="section hidden">
+      <!-- Dynamic auth forms here (client/freelancer/admin) -->
+    </section>
+
+    <!-- Terms Section -->
+    <section id="termsSection" class="section hidden">
+      <!-- Enhanced with accordions for terms list -->
+    </section>
+
+    <!-- Dashboards (Tabbed) -->
+    <section id="clientDash" class="section hidden dashboard">
+      <!-- Tabs: Create Project | My Projects -->
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="create">Create Project</button>
+        <button class="tab-btn" data-tab="my">My Projects</button>
+      </div>
+      <div id="createTab" class="tab-content">
+        <!-- Form with validation -->
+      </div>
+      <div id="myTab" class="tab-content hidden">
+        <!-- Paginated table with search -->
+      </div>
+    </section>
+
+    <!-- Similar for Freelancer/Admin Dashboards -->
+
+    <!-- Ledger Section -->
+    <section id="ledgerSection" class="section hidden">
+      <!-- Paginated table with filters/export -->
+    </section>
+  </main>
+
+  <!-- Toast Notifications -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/dashboard.js"></script>
+  <script src="/js/chat.js"></script>
+  <script src="/js/utils.js"></script>
+</body>
+</html>
